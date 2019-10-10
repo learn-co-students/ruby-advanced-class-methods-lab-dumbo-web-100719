@@ -33,12 +33,16 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    if @@all.include?(name) then
-      self.song
-    else
-      self.create_by_name(name)
-    end
-    self.song
+    # another way of finding it
+    # if @@all.include?(name) then
+    #   self.song
+    # else
+    #   self.create_by_name(name)
+    # end
+    # self.song
+
+    self.all.find {|song| song.name == name}
+
   end
 
   def self.find_by_name(name)
@@ -59,6 +63,7 @@ class Song
     file_name_part[1]= file_name_part[1].chomp(".mp3")
     song_title= file_name_part[1]
     song_artist = file_name_part[0] 
+    
     song= self.create_by_name(song_title)
     song.artist_name = song_artist
     song
@@ -66,11 +71,12 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-     if self.find_by_name(name)
-      self.find_by_name(name)
-    else
-    self.create_by_name(name)
-    end
+    #  if self.find_by_name(name)
+    #   self.find_by_name(name)
+    # else
+    # self.create_by_name(name)
+    # end
+    self.find_by_name(name)? self.find_by_name(name) : self.create_by_name(name)
   end
 
   def self.destroy_all
