@@ -52,4 +52,9 @@ class Song
     end
   end
 
+  def self.new_from_filename(file_name)
+    binding.pry
+
+  end
+
 end
