@@ -31,8 +31,12 @@ class Song
   end
 
   def self.find_by_name(name)
-    binding.pry
-    self.all.find(name)
+    song_arr = self.all.select do |song_instance|
+      song_instance.name == name
+    end
+    song_arr[0]
+    #self.all.each do |song_instance|
+      
   end
 
 end
