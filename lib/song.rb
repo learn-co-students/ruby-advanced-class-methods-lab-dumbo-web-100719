@@ -68,4 +68,8 @@ class Song
     new_song.save
   end
 
+  def self.destroy_all
+    self.all.reject {|x| x}
+  end
+
 end
