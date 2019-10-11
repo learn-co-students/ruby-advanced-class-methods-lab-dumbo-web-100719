@@ -34,7 +34,7 @@ class Song
     song_arr = self.all.select do |song_instance|
       song_instance.name == name
     end
-    song_arr[0]
+    #song_arr[0]
     #self.all.each do |song_instance|
       
   end
