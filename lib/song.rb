@@ -33,10 +33,7 @@ class Song
   def self.find_by_name(name)
     song_arr = self.all.select do |song_instance|
       song_instance.name == name
-    end
-    #song_arr[0]
-    #self.all.each do |song_instance|
-      
+    end   
   end
 
 end
