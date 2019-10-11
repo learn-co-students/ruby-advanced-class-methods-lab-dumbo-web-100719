@@ -54,8 +54,10 @@ class Song
 
   def self.new_from_filename(file_name)
     (artist, song_name, file) = file_name.split(/\.| \- /)
-    binding.pry
-
+    new_song = self.new
+    new_song.name = song_name
+    new_song.artist_name = artist
+    new_song
   end
 
 end
