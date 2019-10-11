@@ -69,7 +69,7 @@ class Song
   end
 
   def self.destroy_all
-   self.all.select {|instance| false}
+   self.all.select {|instance| !instance}
   end
 
 end
