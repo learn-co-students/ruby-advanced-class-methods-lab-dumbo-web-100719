@@ -23,11 +23,15 @@ class Song
     new_song
   end
 
-  def self.create_by_name(string_name)
+  def self.create_by_name(string_name) 
     new_song = self.new
     new_song.name = string_name
     new_song.save
     new_song
+  end
+
+  def self.find_by_name
+    self.class.all.find()
   end
 
 end
