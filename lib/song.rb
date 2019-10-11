@@ -44,8 +44,12 @@ class Song
     else
       self.create_by_name(song_name)
     end
+  end
 
-
+  def self.alphabetical
+    self.all.sort_by do |song_instance|
+      song_instance.name
+    end
   end
 
 end
