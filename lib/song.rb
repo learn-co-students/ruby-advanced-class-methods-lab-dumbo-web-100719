@@ -34,6 +34,7 @@ class Song
     song_arr = self.all.select do |song_instance|
       song_instance.name == name
     end   
+    song_arr[0]
   end
 
   def self.find_or_create_by_name
