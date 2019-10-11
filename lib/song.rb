@@ -69,7 +69,7 @@ class Song
   end
 
   def self.destroy_all
-    self.all.reject {|x| x}
+   self.all = []
   end
 
 end
