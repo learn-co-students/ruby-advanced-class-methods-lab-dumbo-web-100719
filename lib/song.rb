@@ -37,7 +37,8 @@ class Song
     song_arr[0]
   end
 
-  def self.find_or_create_by_name
+  def self.find_or_create_by_name(argument)
+    binding.pry
 
   end
 
