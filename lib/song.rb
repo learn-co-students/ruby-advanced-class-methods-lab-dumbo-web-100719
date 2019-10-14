@@ -52,19 +52,14 @@ class Song
     song.artist_name = ids[0].strip!
     song.name = ids_no_mp3[0].strip!
     song
-    #binding.pry
+    
     
   end
   def self.create_from_filename(path)
-    # ids = path.split("-")
-    # ids_no_mp3 = ids[1].split(".")
-    # song = self.new
-    # song.artist_name = ids[0].strip!
-    # song.name = ids_no_mp3[0].strip!
     song = self.new_from_filename(path)
     song.save
     song
-    #binding.pry
+    
     
   end
 
